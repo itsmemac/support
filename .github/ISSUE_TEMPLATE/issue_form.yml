@@ -7,14 +7,8 @@ body:
       value: |
         Thanks for taking the time to fill out this issue report! Please provide as much detail as possible.
 
-  - type: input
-    id: title
-    attributes:
-      label: Issue Title
-      description: Provide a clear and concise title for this issue
-      placeholder: "e.g., [BUG] - Mermaid Visual Editor - Export button not working"
-    validations:
-      required: true
+        **Note:** Please format the issue title as: [TYPE] - [APPLICATION] - Brief description
+        Example: [BUG] - Mermaid Visual Editor - Export button not working
 
   - type: dropdown
     id: application
