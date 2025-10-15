@@ -1,12 +1,20 @@
 name: Issue Report
 description: Create a detailed issue report for bug reports, enhancements, or other requests
-title: "[ISSUE]: "
 labels: ["needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this issue report! Please provide as much detail as possible.
+
+  - type: input
+    id: title
+    attributes:
+      label: Issue Title
+      description: Provide a clear and concise title for this issue
+      placeholder: "e.g., [BUG] - Mermaid Visual Editor - Export button not working"
+    validations:
+      required: true
 
   - type: dropdown
     id: application
