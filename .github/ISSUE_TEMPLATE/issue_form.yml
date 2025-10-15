@@ -1,0 +1,76 @@
+name: Issue Report
+description: Create a detailed issue report for bug reports, enhancements, or other requests
+title: "[ISSUE]: "
+labels: ["needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue report! Please provide as much detail as possible.
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Application
+      description: Which application does this issue relate to?
+      options:
+        - Mermaid Visual Editor
+        - Game Calendar
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of issue are you reporting?
+      options:
+        - Bug report
+        - Enhancement
+        - Others
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Application Version
+      description: What version of the application are you using?
+      placeholder: "e.g., 1.0.0, 2.3.1, latest"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-details
+    attributes:
+      label: Issue Details
+      description: |
+        Please provide a detailed description of the issue.
+        You can attach images by dragging and dropping, selecting, or pasting them.
+      placeholder: |
+        Describe the issue in detail...
+
+        **Steps to reproduce (for bugs):**
+        1.
+        2.
+        3.
+
+        **Expected behavior:**
+
+        **Actual behavior:**
+
+        **Additional context:**
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other information you'd like to add? (Screenshots, logs, environment details, etc.)
+      placeholder: Add any additional context, screenshots, or files here
+    validations:
+      required: false
